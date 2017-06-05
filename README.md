@@ -25,6 +25,8 @@
 # 2. Shape editor
 Shape editor allows you to create shapes and markers on Google Maps, customising them, and organising them before saving them on a Json file. These shapes are aimed to represent geographical and political divisions such as States, City Neighbourhoods, Districts, Regions, etc.
 
+### [Demo page](https://shape-editor.000webhostapp.com/)
+
 # 3. Installation
 Clone or Download.
 Get your Google Maps API key [here](https://developers.google.com/maps/documentation/javascript/get-api-key), and use it on the following lines of code by replacing "INSERT-YOUR-API-KEY-HERE" with your API key:
