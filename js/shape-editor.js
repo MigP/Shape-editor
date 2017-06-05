@@ -127,7 +127,6 @@
 
 // Replaces the marker icon button with the one that's been selected
   function replaceIconPic(el) {
-    console.log(el);
     document.getElementById('iconButton').src=el.src;
   }
 
