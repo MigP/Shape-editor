@@ -311,7 +311,6 @@ body {
     resize: none;
     text-align: center;
     display: block;
-    height: 65%;
 }
 
 #message_box:focus {
