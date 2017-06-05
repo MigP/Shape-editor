@@ -297,6 +297,7 @@ body {
     padding: 11px;
     justify-content: center;
     display: flex;
+    height: 65%;
 }
 
 #message_box {
