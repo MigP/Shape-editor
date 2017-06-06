@@ -57,11 +57,8 @@
     }
 
     // Gets the popup's coordinates
-      var mousex = event.clientX;
-      var mousey = event.clientY;
-
-      var x0 = mousex;
-      var y0 = mousey;
+      var x0 = mouseX;
+      var y0 = mouseY;
       var x1 = x0 + 274;
       var y1 = y0 + 154;
 
@@ -760,7 +757,7 @@
 // Changes the location of the maps
   function changeLocation() {
     document.getElementById("lastSearch").value = base_location.value;
-    document.getElementById("map_embed").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyB9rbxLgpxchbN1k6ez6dpl5bwiQEZUbmM&q=" + (base_location.value).replace(" ", "+");
+    document.getElementById("map_embed").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCrkmmU2-WAAlfWghYpeEcwAy4zTT5h63c&q=" + (base_location.value).replace(" ", "+");
 
     var geocoder = new google.maps.Geocoder();
   
@@ -1532,7 +1529,9 @@
                 google.maps.event.addListener(
                     shape, 
                     'click', 
-                    function() {onShapeClicked(shape);});
+                    function() {
+                        onShapeClicked(shape);
+                    });
          
                 switch (shape.type) {
                 case RECTANGLE:
@@ -1584,7 +1583,7 @@
         // Map creation
             function createMap(mapContainer) {
                 // Creates base map
-                    document.getElementById("map_embed").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyB9rbxLgpxchbN1k6ez6dpl5bwiQEZUbmM&q=" + base_location.value;
+                    document.getElementById("map_embed").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCrkmmU2-WAAlfWghYpeEcwAy4zTT5h63c&q=" + base_location.value;
 
                 // Creates overlay map
                     if (chosenMapType == "roadmap") {
@@ -1836,7 +1835,6 @@
 
             function onDrawingModeChanged() {
                 closeIconOptions();
-                console.log(drawingManager.drawingMode);
                 if (drawingManager.drawingMode == "marker") {
                     openIconOptions();
                 } else {
@@ -1864,6 +1862,10 @@
                     initialReplaceIconPic();
                     populateDropbox();
                     initialisePassedVars();
+                    $("body").click(function(event) {
+                        mouseX = event.clientX;
+                        mouseY = event.clientY;
+                    });
 
                     google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
                         //this part runs when the mapobject is shown for the first time
