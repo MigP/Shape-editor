@@ -10,12 +10,12 @@
       <link type="text/css" rel="stylesheet" href="css/styles.css"/>
     <!--External JS-->
       <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rbxLgpxchbN1k6ez6dpl5bwiQEZUbmM&libraries=drawing"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrkmmU2-WAAlfWghYpeEcwAy4zTT5h63c&libraries=drawing"></script>
       <script type="text/javascript" src="js/shape-editor.js"></script>
     <!--JS-->
       <script>
         // Global variables
-          var map, _selection = null, shape, globalEvent, _shapes = [], shapesToSave = [], x_regions=[], newShapeCreateTracker = 0, _markerButton, markerIcon = 1, offX, offY, openDropdown = "", search_marker, locationSearch, files = [], fileCount;
+          var map, _selection = null, shape, globalEvent, _shapes = [], shapesToSave = [], x_regions=[], newShapeCreateTracker = 0, _markerButton, markerIcon = 1, offX, offY, openDropdown = "", search_marker, locationSearch, files = [], fileCount, mouseX, mouseY;
 
 
           var trafficLayer = new google.maps.TrafficLayer();
