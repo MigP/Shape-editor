@@ -25,7 +25,7 @@
 # 2. Shape editor
 Shape editor allows you to create shapes and markers on Google Maps, customising them, and organising them before saving them on a Json file. These shapes are aimed to represent geographical and political divisions such as States, City Neighbourhoods, Districts, Regions, etc.
 
-## [Demo page](https://shape-editor.000webhostapp.com/)
+## [Demo page](http://shapes.miguelpinto.dx.am/)
 
 # 3. Installation
 Clone or Download.
